@@ -38,18 +38,68 @@ a {
 .nav-links li a {
     color: #141601;
     font-size: 1.4em;
-    
-    
+    font-family: 'Oleo Script', cursive;
+
 }
-.burger{
+
+/* contact button */
+.nav-links #contact {
+    border-radius: 20px;
+    background-color: rgba(20, 22, 1, 0.4);
+    outline: none;
+    border: 2px solid rgba(20, 22, 1, 0.4);
+    padding: 5px 10px;
+    color: white;
     position: absolute;
-    top: 4vh;
     right: 10%;
+    font-family:  'Oleo Script', cursive;
+
+}
+.nav-links #contact:hover{
+    background-color: rgba(20, 22, 1, 0.2);
+    border: 2px dashed  rgba(20, 22, 1, 0.4);
+}
+
+
+/* burger icon */
+.burger {
+    /* position: absolute;
+    top: 4vh;
+    right: 10%; */
+    cursor: pointer;
     display: none;
 }
-.burger .line1 , .line2, .line3{ 
+
+.burger div{
     background-color: green;
     width: 30px;
     height: 3px;
     margin-top: 5px;
-} 
+    transition: all 0.3s ease;
+}
+
+
+
+@media screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        height: 90vh;
+        top: 10vh;
+        width:100%;
+        transform: translateX(100%);
+        transition: 0.5s all ease-in;
+
+        
+    }
+    .burger{
+        display: block;
+
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+}
