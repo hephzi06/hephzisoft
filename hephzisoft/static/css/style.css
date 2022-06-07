@@ -12,146 +12,51 @@ a {
 }
 
 
-nav {
+#header{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
     min-height: 10vh;
-    background-color: rgba(0, 0, 0, 0.2);
-    width: 100%;
-    position: fixed;
-    font-family: cursive;
+    background-color: rgba(20, 22, 1, 0.4);
+    align-items: center;
+    
 }
-
-.logo img {
-   height: 9vh;
-   border-radius: 50%;
-
-
-
-}
-
-
-.nav-links {
+.nav-links{
     display: flex;
     width: 40%;
     justify-content: space-around;
-    margin-left: 20em;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    margin-left: 18em;
 
 }
-
-.nav-links li {
+.nav-links li{
     list-style: none;
 }
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1em;
-    padding: 0px 20px;
+.nav-links li .nav-item{
+   color: #141601;
+   font-family: 'Oleo Script', cursive;
 }
-/* contact button */
-.nav-links #contact {
-    border-radius: 20px;
-    background-color: rgba(20, 22, 1, 0.4);
-    outline: none;
-    border: 2px solid rgba(20, 22, 1, 0.4);
+.logo img{
+        height: 9vh;
+        border-radius: 50%;
+        margin-left: 20px;
+}
+
+.nav-links li #contact{
+    border: 1px solid #141601;
     padding: 5px 10px;
+    border-radius: 20px;
+    font-family: 'Oleo Script', cursive;
     color: white;
-    position: absolute;
-    right: 2%;
-    font-family:  'Oleo Script', cursive;
+    background-color: rgba(20, 22, 1, 0.3);
+    
 
 }
-.nav-links #contact:hover{
-    background-color: rgba(20, 22, 1, 0.2);
-    border: 2px dashed  rgba(20, 22, 1, 0.4);
-}
-
-.burger {
+.burger{
     display: none;
     cursor: pointer;
 }
-
-.burger div {
-    width: 25px;
+.burger div{
+    width: 20px;
     height: 2px;
-    background-color: white;
-    margin: 5px;
-    transition: all 0.3s ease;
-}
-
-@media screen and (max-width:1024px) {
-    .nav-links {
-        width: 70%;
-        margin-left: 0em;
-    }
-}
-
-@media screen and (max-width:768px) {
-    body {
-        overflow-x: hidden;
-    }
-
-    .nav-links {
-        position: absolute;
-        right: 0px;
-        height: 90vh;
-        top: 10vh;
-        background-color: rgba(0, 0, 0, 0.2);
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        align-items: center;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-
-    }
-
-    .nav-links li {
-        opacity: 0;
-    }
-
-    .burger {
-        display: block;
-    }
-
-    nav ul li:hover .sub-menu1 ul {
-        padding-left: 30px;
-    }
-
-
-
-}
-
-
-
-.nav-active {
-    transform: translateX(0%);
-}
-
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
-.toggle .line1 {
-    transform: rotate(-47deg) translate(-5px, 6px);
-}
-
-.toggle .line2 {
-    opacity: 0;
-}
-
-.toggle .line3 {
-    transform: rotate(50deg) translate(-5px, -6px);
+    margin-top: 5px;
+    background-color:white;
 }
